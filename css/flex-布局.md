@@ -334,3 +334,5 @@ item3的最终宽度为：110 + (160 * 0.2) = 142px
   align-self: auto（默认值） | flex-start | center | flex-end | baseline |stretch
 }
 ```
+
+文章链接 [4.2 基本的布局方法——Flex布局](https://developers.weixin.qq.com/ebook?action=get_post_info&docid=00080e799303986b0086e605f5680a)
