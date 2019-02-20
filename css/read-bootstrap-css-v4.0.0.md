@@ -207,3 +207,291 @@ https://www.cnblogs.com/ooooevan/p/5470982.html
 
 ---
 
+7、
+
+`text-size-adjust: 100%;`
+
+当将字体设置为小于12px的时候，chrome浏览器往往不会显示比 **12px** 还要小的字，因为该浏览器中默认的字体最小是 12px，所以当你想设置为 10px 的时候，该浏览器页面中还是会显示的是 12px 的大小的。但是如果我们想要把它设置为 10px 字体的话，我们就可以利用这个属性了。
+
+但是用这个属性，并且是放在 html 中或者是 body 中的，会导致页面的缩放效果失效，而且当我们想要放大整个页面的时候，一般来说字体也应该是要放大的，但是就因为我们使用了该属性，导致字体是不会随着网页的放大而变大的。
+
+```css
+/*  通常来说我们都是想让哪一个浏览器设置这个属性就加上哪一个浏览器内核的前缀： */
+html{-webkit-text-size-adjust:none}
+/* 建议下面的写法 */
+html{-webkit-text-size-adjust:100%;}
+```
+
+---
+
+8、
+
+display 属性
+
+该属性规定元素应该生成的框的类型。
+
+```css
+p{
+  display: inline;
+}
+```
+* `inline`（默认）：此元素会被显示为内联元素，元素前后没有换行符
+* `none`：此元素不会被显示。
+* `block`：此元素将显示为块级元素，此元素前后会带有换行符。
+
+举例：
+
+```html
+<html>
+<head>
+<style type="text/css">
+p {display: inline}
+div {display: none}
+</style>
+</head>
+
+<body>
+<p>本例中的样式表把段落元素设置为内联元素。</p>
+
+<p>而 div 元素不会显示出来！</p>
+
+<div>div 元素的内容不会显示出来！</div>
+</body>
+</html>
+```
+
+输出结果：
+
+```
+本例中的样式表把段落元素设置为内联元素。 而 div 元素不会显示出来！
+```
+
+```html
+<html>
+<head>
+<style type="text/css">
+span
+{
+display: block
+}
+</style>
+</head>
+<body>
+
+<span>本例中的样式表把 span 元素设置为块级元素。</span>
+<span>两个 span 元素之间产生了一个换行行为。</span>
+
+</body>
+</html>
+
+```
+
+内联元素就是元素间不换行，块级元素就是每个元素在各自的行内！
+
+
+http://www.w3school.com.cn/cssref/pr_class_display.asp
+
+---
+
+9、
+
+outline 属性
+
+该属性是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用。
+
+```css
+p {
+   outline:#00FF00 dotted thick;
+}
+```
+
+* outline-color：边框的颜色
+* outline-style：边框的样式(none-无轮廓、dotted-点状、dashed-虚线、solid-实线等)
+* outline-width：边框的宽度
+
+http://www.w3school.com.cn/cssref/pr_outline.asp
+
+outline-offset 属性
+
+该属性对轮廓进行偏移（轮廓与边框边缘的距离），并在边框边缘进行绘制。
+
+举例：规定边框边缘之外 15 像素处的轮廓
+
+```css
+div{
+  border:2px solid black;
+  outline:2px solid red;
+  outline-offset:15px;
+}
+```
+
+---
+
+9、
+
+font-style 属性
+
+该属性设置使用斜体、倾斜或正常字体。
+
+* normal（默认值）：标准字体样式。
+* italic：斜体
+* oblique：倾斜
+
+---
+
+10、
+
+vertical-align 属性
+
+该属性设置元素的**垂直对齐方式**。这个属性会设置**单元格框中的单元格内容的对齐方式**。
+
+* baseline（默认）：元素放置在父元素的基线上
+* sub：垂直对齐文本的下标
+* super：垂直对齐文本的上标
+* top：把元素的顶端与行中最高元素的顶端对齐
+* text-top：把元素的顶端与父元素字体的顶端对齐
+* middle：把此元素放置在父元素的中部
+* bottom：把元素的顶端与行中最低的元素的顶端对齐
+* text-bottom：把元素的底端与父元素字体的底端对齐
+
+http://www.w3school.com.cn/css/pr_pos_vertical-align.asp
+
+---
+
+11、
+
+text-decoration 属性
+
+这个属性允许对文本设置某种效果，如**加下划线**。如果后代元素没有自己的装饰，祖先元素上设置的装饰会“延伸”到后代元素中。
+
+* none（默认）：标准的文本
+* underline：文本下的一条线
+* overline：文本上的一条线
+* line-through：穿过文本的一条线
+* blink：闪烁的文本
+
+http://www.w3school.com.cn/cssref/pr_text_text-decoration.asp
+
+---
+
+12、
+
+overflow 属性
+
+该属性规定当内容溢出元素框时发生的事情。
+
+* visible（默认）：内容不会被修剪，会呈现在元素框之外
+* hidden：内容会被修剪，并且其余内容是不可见的
+* scroll：内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容
+* auto：如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容
+
+
+http://www.w3school.com.cn/cssref/pr_pos_overflow.asp
+
+overflow-style 属性
+
+该属性规定溢出元素的首选滚动方法。
+
+* auto
+* scrollbar：为溢出元素添加滚动条
+* panner
+* move：用户能够直接移动元素的内容。通常，用户能够用鼠标拖动内容
+* marquee：内容自主移动，不需任何用户代理对其控制
+
+http://www.w3school.com.cn/cssref/pr_overflow-style.asp
+
+---
+
+13、
+
+caption-side 属性
+
+该属性设置表格标题的位置。指定了表标题相对于表框的放置位置。表标题显示为好像它是表之前（或之后）的一个块级元素。
+
+* top（默认）：表格标题定位在表格之上
+* bottom：表格标题定位在表格之下
+* inherit：规定应该从父元素继承 caption-side 属性的值
+
+http://www.w3school.com.cn/cssref/pr_tab_caption-side.asp
+
+---
+
+14、
+
+text-transform 属性
+
+该属性控制文本的大小写。
+
+* none（默认）：标准文本
+* capitalize：文本中的每个单词以大写字母开头
+* uppercase：定义仅有大写字母
+* lowercase：定义无大写字母，仅有小写字母
+
+http://www.w3school.com.cn/cssref/pr_text_text-transform.asp
+
+---
+
+15、
+
+appearance 属性
+
+该属性允许您使元素看上去像标准的用户界面元素。
+
+举例：使 div 元素看上去像一个按钮：
+
+```css
+div
+{
+appearance:button;
+-moz-appearance:button; /* Firefox */
+-webkit-appearance:button; /* Safari 和 Chrome */
+}
+```
+
+所有主流浏览器都不支持 appearance 属性。Firefox 支持替代的 -moz-appearance 属性。Safari 和 Chrome 支持替代的 -webkit-appearance 属性。
+
+* normal：将元素呈现为常规元素
+* icon：将元素呈现为图标（小图片）
+* window： 将元素呈现为视口
+* button：将元素呈现为按钮
+* menu： 将元素呈现为一套供用户选择的选项
+* field：将元素呈现为输入字段
+
+http://www.w3school.com.cn/cssref/pr_appearance.asp
+
+---
+
+16、
+
+white-space 属性
+
+该属性设置如何处理元素内的空白。
+
+举例：规定段落中的文本不进行换行
+
+```css
+p{
+   white-space: nowrap;
+}
+```
+
+* normal（默认）:空白会被浏览器忽略
+* pre：空白会被浏览器保留。其行为方式类似 HTML 中的 `<pre>` 标签
+* nowrap：文本不会换行，文本会在在同一行上继续，直到遇到 `<br>` 标签为止
+* pre-wrap：保留空白符序列，但是正常地进行换行
+* pre-line：合并空白符序列，但是保留换行符
+
+http://www.w3school.com.cn/cssref/pr_text_white-space.asp
+
+---
+
+17、
+
+cursor 属性
+
+该属性规定要显示的光标的类型（形状）。定义了鼠标指针放在一个元素边界范围内时所用的光标形状。
+
+http://www.w3school.com.cn/cssref/pr_class_cursor.asp
+
+
+---
