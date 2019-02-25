@@ -236,8 +236,9 @@ p{
 }
 ```
 * `inline`（默认）：此元素会被显示为内联元素，元素前后没有换行符
-* `none`：此元素不会被显示。
-* `block`：此元素将显示为块级元素，此元素前后会带有换行符。
+* `inline-block`（融合行内于块级）：不独占一行的块级元素
+* `none`：此元素不会被显示
+* `block`：此元素将显示为块级元素，此元素前后会带有换行符
 
 举例：
 
@@ -493,5 +494,41 @@ cursor 属性
 
 http://www.w3school.com.cn/cssref/pr_class_cursor.asp
 
+
+---
+
+18、
+
+单位 px、em 和 rem
+
+* px；绝对单位
+* em：相对单位，**基准点是父节点的大小**，如果自身定义了 `font-size` 按自身来计算（浏览器默认字体为 16px）
+* rem：相对单位，可理解为（`root em`），相对根节点 html 字体大小来计算，css3 新加属性
+
+---
+
+19、
+
+opacity 属性
+
+该属性设置元素的**不透明级别**。
+
+* value：规定不透明度。从 0.0 （完全透明）到 1.0（完全不透明）
+* inherit：从父元素继承 opacity 属性的值
+
+---
+
+20、
+
+list-style 属性
+
+该属性设置所有的列表样式。
+
+* list-style-type：none、disc（默认）-实心圆、circle-空心圆、decimal-数字等
+* list-style-position：inside、outside（默认）
+* list-style-image：none、url('图像路径')
+
+
+http://www.w3school.com.cn/cssref/pr_list-style.asp
 
 ---
