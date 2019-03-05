@@ -14,7 +14,10 @@ Vue 组件的概念就是把页面中公共的功能单独封装成一个组件�
 
 示例代码
 
-
+![image](https://github.com/huabinzhang427/Doc-Zhang/blob/master/vue/images/WX20190305-121348%402x.png)
 
 
 然后回到需要使用的组件中，进行手动添加（后面会说到可以使用 `路由-router` 进行动态添加）
+
+![image](https://github.com/huabinzhang427/Doc-Zhang/blob/master/vue/images/WX20190305-121453@2x.png)
+
