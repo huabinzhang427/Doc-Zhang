@@ -21,7 +21,7 @@ NodeJs 不为每个客户端连接创建一个新的线程，而仅仅使用一�
 
 Node.js 可以做什么？
 
-<!-- ![image](https://github.com/huabinzhang427/Doc-Zhang/blob/master/NodeJs/images/dowhat.png) -->
+![image](https://github.com/huabinzhang427/Doc-Zhang/blob/master/NodeJs/images/dowhat.png)
 
 ## NodeJS 常用模块
 
