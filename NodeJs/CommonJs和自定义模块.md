@@ -120,3 +120,9 @@ https://npm.taobao.org/ 淘宝 npm 镜像官网
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 ```
 
+
+## 代码示例
+
+利用 `http、 `url`、`path` 和 `fs` 模块创建一个 web 服务器。
+
+https://github.com/huabinzhang427/webSample
